@@ -2,22 +2,24 @@
 // import heroImg from './assets/hero.png'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from './assets/vite.svg'
+import MovieCard from './components/Moviecard'
+import Home from './pages/home'
+import Favorites from './pages/favorites'
+import NavBar from './components/Navbar'
+import {Routes,Route} from "react-router-dom"
 import './App.css'
 function App() {
   return (
-    <>
-      <Text display="Hello this is gooner anuj"/>
-      <Text display="Hello this is pro sakar"/>
-    </>
+    <main className='main-content'>
+      <NavBar></NavBar>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/favorites" element={<Favorites />} />
+      </Routes>
+    </main>
   )
 }
-function Text({display}) {
-  return(
-    <div>
-        <p>{display}</p>
-      </div>
-  )
-}
+
 
 export default App
 // function App() {

@@ -10,8 +10,11 @@ function MovieCard({movie}) {
                 <button className="favorite-btn" onClick={onFavoriteClick}>♥</button>
             </div>
             <div className="movie-info">
-                <h3>movie.title</h3>
+                <h3>{movie.title}</h3>
+                <p>{movie.release_date}</p>
             </div>
         </div>
     </div>
+    
 }
+export default MovieCard
