@@ -7,16 +7,19 @@ import Home from './pages/home'
 import Favorites from './pages/favorites'
 import NavBar from './components/Navbar'
 import {Routes,Route} from "react-router-dom"
-import './App.css'
+import './css/App.css'
 function App() {
   return (
-    <main className='main-content'>
+    <div>
       <NavBar></NavBar>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/favorites" element={<Favorites />} />
-      </Routes>
-    </main>
+      <main className="main-content">
+        <Routes>
+          <Route path='/' element={<Home></Home>}></Route>
+          <Route path='/favorites' element={<Favorites />}></Route>
+        </Routes>
+      </main>
+    </div>
+    
   )
 }
 
