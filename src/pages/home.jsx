@@ -31,7 +31,7 @@ function Home() {
         if (loading) return
         setLoading(true)
         try {
-            searchResults = await searchMovies(searchQuery)
+            const searchResults = await searchMovies(searchQuery)
             setMovies(searchResults)
             setError(null)
         } catch (err) {
@@ -69,7 +69,7 @@ function Home() {
                         )
                     )}
                 </div>
-            )}
+            )} 
         </div>
     )
 }
